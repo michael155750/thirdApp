@@ -22,7 +22,8 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         android.os.Debug.waitForDebugger();
-        if (intent.getAction().matches("com.javacodegeeks.android.A_CUSTOM_INTENT")) {
+
+        if (intent.getAction().matches("com.example.broadcast.MY_NOTIFICATION")) {
             id = "channel_1";
             description = "getTravelsChannel";
             importance = NotificationManager.IMPORTANCE_HIGH;

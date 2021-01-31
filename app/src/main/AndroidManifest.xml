@@ -16,15 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name="MyBroadcastReceiver"
-            android:process=":remote">
+        <receiver android:name=".MyBroadcastReceiver"
+            android:process=":remote" android:exported="true"
+            android:enabled="true">
         <intent-filter
-            android:enabled="true"
-            android:exported="true"
+
 
             >
-            <action android:name="com.javacodegeeks.android.A_CUSTOM_INTENT"/>
+            <action android:name="com.example.broadcast.MY_NOTIFICATION"/>
         </intent-filter>
+
         </receiver>
     </application>
 
